@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>COVID-19 Global Dashboard</h1>
+            <p>Real-time COVID-19 statistics and data</p>
+        </header>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading COVID-19 data...</p>
+        </div>
+
+        <main id="main-content" class="hidden">
+            <div class="stats-grid">
+                <div class="stat-card total-cases">
+                    <div class="stat-icon">🦠</div>
+                    <div class="stat-info">
+                        <h3>Total Cases</h3>
+                        <p class="stat-number" id="total-cases">-</p>
+                        <span class="stat-change" id="new-cases">-</span>
+                    </div>
+                </div>
+
+                <div class="stat-card total-deaths">
+                    <div class="stat-icon">💀</div>
+                    <div class="stat-info">
+                        <h3>Total Deaths</h3>
+                        <p class="stat-number" id="total-deaths">-</p>
+                        <span class="stat-change" id="new-deaths">-</span>
+                    </div>
+                </div>
+
+                <div class="stat-card total-recovered">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3>Total Recovered</h3>
+                        <p class="stat-number" id="total-recovered">-</p>
+                        <span class="stat-change" id="new-recovered">-</span>
+                    </div>
+                </div>
+
+                <div class="stat-card active-cases">
+                    <div class="stat-icon">🏥</div>
+                    <div class="stat-info">
+                        <h3>Active Cases</h3>
+                        <p class="stat-number" id="active-cases">-</p>
+                        <span class="stat-change" id="active-change">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="countries-section">
+                <h2>Top Affected Countries</h2>
+                <div class="countries-grid" id="countries-grid">
+                    <!-- Countries will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <footer>
+                <p>Data source: <a href="https://disease.sh" target="_blank">disease.sh</a></p>
+                <p>Last updated: <span id="last-updated">-</span></p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
